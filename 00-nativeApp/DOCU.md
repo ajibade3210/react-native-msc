@@ -1,0 +1,2 @@
+- View: This is almost like a `div` element. Its a container element
+- SafeAreaView: Wraps or align view witin a safe area in the app
