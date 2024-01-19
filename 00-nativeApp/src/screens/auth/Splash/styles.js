@@ -26,6 +26,10 @@ export const styles = StyleSheet.create({
     color: colors.orange,
     textDecorationLine: 'underline',
   },
+  splashBtn: {
+    width: '100%',
+    flexDirection: 'row',
+  },
   footerText: {
     color: colors.blue,
     textAlign: 'center',

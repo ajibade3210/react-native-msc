@@ -2,12 +2,11 @@ import {Text, Pressable, TouchableOpacity} from 'react-native';
 import React from 'react';
 import {styles} from './styles';
 
-const Button = ({title, handpress, style}) => {
-  console.log('INSIDE BUTTON-----');
+const Button = ({title, onPress, style}) => {
   return (
     <TouchableOpacity
       activeOpacity={0.6}
-      onPress={handpress}
+      onPress={onPress}
       style={[styles.container, style]}>
       <Text style={styles.title}>{title}</Text>
     </TouchableOpacity>
