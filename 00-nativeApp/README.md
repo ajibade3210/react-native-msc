@@ -65,9 +65,9 @@ On the web style is done from left to right, on mobile it is done from top to bo
 - Apperance Module:
 - Linking:
 - FlatList:
-   - horizontal
-   - pagingEnabled
-   -
+  - horizontal
+  - pagingEnabled
+  -
 - DeepLinking:
 - TouchableOpacity:
 - TouchableOpacity:
@@ -135,3 +135,29 @@ Steps.
 - And CreateNativeStackNavigator from @react-navigation/native-stack
 - Next import your Screens.
 -
+
+Using Axios
+
+- For Ios to send an http request add:
+  `<key>NSAllowsArbitraryLoads</key><true/>`
+  To Ios --- App folder --- info.plist
+
+-- Global State Management ---
+First off:
+create a `export const userContext = React.createContext({})` using `React.createContext()`
+
+Next, wrap the whole app in a Provider, and pass the default value:
+`  <userContext.Provider value={{user, setUser}}>`
+
+To use or update the saved contents, we are passing our values as a state and the setState funcion to update it.
+
+Next to use the saved state in any compotent:
+` const {user, setUser} = useContext(userContext);`
+
+Call it using useContext from react and pass the userContext crated earlier.
+
+
+To save our datas so when the app is closed and reopened the data will stil persist.
+On mobile apps instead of local storage we have AsynceStorage.
+`npm install @react-native-async-storage/async-storage`
+
